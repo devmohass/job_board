@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: postgres_job_board
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: kevin
+      POSTGRES_PASSWORD: kevin
+      POSTGRES_DB: job_board
+    ports:
+      - "5432:5432"
+    volumes:
+      - jobboard_pgdata:/var/lib/postgresql/data
+
+  pgadmin:
+    container_name: pgadmin_job_board
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: job_board@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: kevin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+
+volumes:
+  jobboard_pgdata:

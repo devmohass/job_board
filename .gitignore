@@ -1,0 +1,28 @@
+# React
+node_modules/
+dist/
+build/
+.env
+
+# Spring boot
+target/
+
+# IDE
+.idea/
+.vscode/
+
+# Docker + DB
+pgdata/
+*.sql
+*.dump
+
+# System
+.DS_Store
+Thumbs.db
+
+
+# Logs
+*.log
+
+# Test coverage
+coverage/
