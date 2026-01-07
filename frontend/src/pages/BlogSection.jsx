@@ -14,7 +14,7 @@ function BlogSection() {
 
       <div className="grid md:grid-cols-3 mt-12 gap-20">
         {/* Card 1 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer">
+        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-500 cursor-pointer hover:scale-90 transition-all duration-500 ease-out transition">
           <img
             src="/3.jpg"
             alt="Job Change"
@@ -38,7 +38,7 @@ function BlogSection() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer">
+        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-500 cursor-pointer hover:scale-90 transition-all duration-500 ease-out transition">
           <img
             src="/2.jpg"
             alt="Stand Out"
@@ -62,7 +62,7 @@ function BlogSection() {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer">
+        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-500 cursor-pointer hover:scale-90 transition-all duration-500 ease-out transition">
           <img src="/1.jpg" alt="Skills" className="h-48 w-full object-cover" />
           <div className="p-5">
             <div className="flex gap-2 text-sm text-gray-500 mb-2">
