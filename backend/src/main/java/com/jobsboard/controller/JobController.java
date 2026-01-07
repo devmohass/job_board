@@ -44,6 +44,7 @@ public class JobController {
     public ResponseEntity<Job> updateJob(@PathVariable Long id, @RequestBody Job jobDetails) {
         return jobRepo.findById(id).map(job -> {
             job.setCompany(jobDetails.getCompany());
+            job.setEmail(jobDetails.getEmail());
             job.setTitle(jobDetails.getTitle());
             job.setType(jobDetails.getType());
             job.setCategory(jobDetails.getCategory());

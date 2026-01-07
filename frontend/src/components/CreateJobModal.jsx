@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
-function CreateJobModal({ onClose, onSubmit, editJob }) {
+function CreateJobModal({onClose, onSubmit, editJob}) {
   const [formData, setFormData] = useState({
     title: "",
     company: "",
+    email: "",
     category: "",
     type: "",
     location: "",
@@ -28,7 +29,7 @@ function CreateJobModal({ onClose, onSubmit, editJob }) {
   }, [editJob]);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({...formData, [e.target.name]: e.target.value});
   };
 
   const handleSubmit = () => {
@@ -65,6 +66,13 @@ function CreateJobModal({ onClose, onSubmit, editJob }) {
             name="company"
             placeholder="Company Name"
             value={formData.company}
+            onChange={handleChange}
+            className="border rounded p-2"
+          />
+          <input
+            name="email"
+            placeholder="Company email"
+            value={formData.email}
             onChange={handleChange}
             className="border rounded p-2"
           />
@@ -142,8 +150,7 @@ function CreateJobModal({ onClose, onSubmit, editJob }) {
             name="period"
             value={formData.period}
             onChange={handleChange}
-            className="border rounded p-2"
-          >
+            className="border rounded p-2">
             <option value="">Select Period</option>
             <option value="Hourly">Hourly</option>
             <option value="Monthly">Monthly</option>
@@ -154,14 +161,12 @@ function CreateJobModal({ onClose, onSubmit, editJob }) {
         <div className="mt-6 flex justify-end gap-3">
           <button
             onClick={onClose}
-            className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
-          >
+            className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">
             Cancel
           </button>
           <button
             onClick={handleSubmit}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
             {editJob ? "Update Job" : "Post Job"}
           </button>
         </div>

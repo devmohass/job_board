@@ -117,6 +117,10 @@ function AdminDashboard() {
                       <p className="text-gray-500 text-sm">Company</p>
                       <p>{job.company}</p>
                     </div>
+                  <div>
+                      <p className="text-gray-500 text-sm">Email</p>
+                      <p>{job.email}</p>
+                    </div>  
                     <div>
                       <p className="text-gray-500 text-sm">Category</p>
                       <p>{job.category}</p>

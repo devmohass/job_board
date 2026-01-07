@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
 import axios from "axios";
 
 const API_URL = "http://localhost:2000/api/jobs";
 
 function JobDetails() {
-  const { id } = useParams();
+  const {id} = useParams();
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -49,7 +49,7 @@ function JobDetails() {
           </div>
           <button
             onClick={() => {
-              const companyEmail = `${job.company.toLowerCase()}@gmail.com`; // e.g. hormud@gmail.com
+              const companyEmail = `${job.email}`; // e.g. hormud@gmail.com
               const toEmail = encodeURIComponent(companyEmail);
               const subject = encodeURIComponent(
                 "Job Application for " + job.title
@@ -59,8 +59,7 @@ function JobDetails() {
 
               window.open(gmailUrl, "_blank");
             }}
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-          >
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
             Get in touch
           </button>
         </div>

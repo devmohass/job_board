@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { FaSearch, FaBell, FaBars } from "react-icons/fa";
-import { useLocation, useNavigate } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import {useState, useEffect} from "react";
+import {FaSearch, FaBell, FaBars} from "react-icons/fa";
+import {useLocation, useNavigate} from "react-router-dom";
+import {Link as ScrollLink} from "react-scroll";
 import AuthModal from "./AuthModal";
 
 export default function Navbar() {
@@ -21,15 +21,15 @@ export default function Navbar() {
 
   // Common nav items
   const navItems = [
-    { name: "Home", to: "home" },
-    { name: "Jobs", to: "jobs" },
-    { name: "Job Guiding", to: "guiding" },
-    { name: "Our Blog", to: "blog" },
-    { name: "Contact Us", to: "contact" },
+    {name: "Home", to: "home"},
+    {name: "Jobs", to: "jobs"},
+    {name: "Job Guiding", to: "guiding"},
+    {name: "Our Blog", to: "blog"},
+    {name: "Contact Us", to: "contact"},
   ];
 
   // Only admins see this dashboard link
-  const adminNav = { name: "Dashboard", path: "/AdminDashboard" };
+  const adminNav = {name: "Dashboard", path: "/AdminDashboard"};
 
   // Logout function
   const handleLogout = () => {
@@ -46,18 +46,16 @@ export default function Navbar() {
         key={item.to}
         to={item.to}
         smooth={true}
-        duration={600}
+        duration={700}
         offset={-60}
-        className="hover:text-blue-400 text-black cursor-pointer"
-      >
+        className="hover:text-blue-400 text-black cursor-pointer">
         {item.name}
       </ScrollLink>
     ) : (
       <span
         key={item.to}
         onClick={() => navigate("/#" + item.to)}
-        className="hover:text-blue-400 text-black cursor-pointer"
-      >
+        className="hover:text-blue-400 text-black cursor-pointer">
         {item.name}
       </span>
     );
@@ -67,8 +65,7 @@ export default function Navbar() {
     <span
       key={item.path}
       onClick={() => navigate(item.path)}
-      className="hover:text-blue-400 text-black cursor-pointer"
-    >
+      className="hover:text-blue-400 text-black cursor-pointer">
       {item.name}
     </span>
   );
@@ -94,15 +91,13 @@ export default function Navbar() {
             {role ? (
               <button
                 onClick={handleLogout}
-                className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded font-medium transition"
-              >
+                className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded font-medium transition">
                 Logout
               </button>
             ) : (
               <button
                 onClick={() => setShowAuthModal(true)}
-                className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition"
-              >
+                className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition">
                 SIGN
               </button>
             )}
@@ -137,8 +132,7 @@ export default function Navbar() {
                     setIsOpen(false);
                     handleLogout();
                   }}
-                  className="mt-2 px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded font-medium transition"
-                >
+                  className="mt-2 px-5 py-2 bg-red-500 hover:bg-red-600 text-white rounded font-medium transition">
                   Logout
                 </button>
               ) : (
@@ -147,8 +141,7 @@ export default function Navbar() {
                     setIsOpen(false);
                     setShowAuthModal(true);
                   }}
-                  className="mt-2 px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition"
-                >
+                  className="mt-2 px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition">
                   SIGN
                 </button>
               )}

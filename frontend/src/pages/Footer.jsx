@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
-import { FaLocationDot, FaPhone } from "react-icons/fa6";
+import {FaLocationDot, FaPhone} from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -29,10 +29,10 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3 text-black">Our services</h3>
           <ul className="space-y-2">
-            <li>Find job</li>
-            <li>Create resume</li>
-            <li>Search company</li>
-            <li>Pricing Plan</li>
+            <li className="hover:text-blue-400">Find job</li>
+            <li className="hover:text-blue-400">Create resume</li>
+            <li className="hover:text-blue-400">Search company</li>
+            <li className="hover:text-blue-400">Pricing Plan</li>
           </ul>
         </div>
 
@@ -40,11 +40,11 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3 text-black">Links</h3>
           <ul className="space-y-2">
-            <li>Blog</li>
-            <li>Help center</li>
-            <li>Contact us</li>
-            <li>Privacy Policy</li>
-            <li>About us</li>
+            <li className="hover:text-blue-400">Blog</li>
+            <li className="hover:text-blue-400">Help center</li>
+            <li className="hover:text-blue-400">Contact us</li>
+            <li className="hover:text-blue-400">Privacy Policy</li>
+            <li className="hover:text-blue-400">About us</li>
           </ul>
         </div>
 
@@ -52,18 +52,18 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3 text-black">Contact Us</h3>
           <div className="flex gap-3 text-xl mb-3">
-            <FaInstagram />
-            <FaFacebookF />
-            <FaWhatsapp />
-            <FaLinkedinIn />
-            <FaXTwitter />
+            <FaInstagram className="hover:text-blue-400"/>
+            <FaFacebookF className="hover:text-blue-400"/>
+            <FaWhatsapp className="hover:text-blue-400"/>
+            <FaLinkedinIn className="hover:text-blue-400"/>
+            <FaXTwitter className="hover:text-blue-400"/>
           </div>
           <div className="flex items-center gap-2 mb-2">
-            <FaLocationDot />
+            <FaLocationDot className="hover:text-blue-400"/>
             <span>1500 Marilla St, Dallas, TX 75201</span>
           </div>
           <div className="flex items-center gap-2">
-            <FaPhone />
+            <FaPhone className="hover:text-blue-400"/>
             <span>1(647)558-5560</span>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-gray-100 mt-8 py-4 px-4 flex flex-col md:flex-row items-center justify-between text-gray-600 text-sm">
-        <div>Joblin Copyright © 2024</div>
+        <div className="hover:text-blue-400">Joblin Copyright © 2024</div>
         <div className="flex gap-3 mt-2 md:mt-0">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"

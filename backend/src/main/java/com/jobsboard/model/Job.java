@@ -15,6 +15,7 @@ public class Job {
     private Long id;
 
     private String company;
+    private String email;
     private String title;
     private String type;       // Full-time, Part-time, Remote, etc.
     private String category;
